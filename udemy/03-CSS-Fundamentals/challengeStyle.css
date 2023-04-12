@@ -13,6 +13,7 @@ body {
   width: 825px;
   margin: 40px auto;
   border: 5px solid black;
+  position: relative;
 }
 
 h1 {
@@ -21,6 +22,20 @@ h1 {
   font-size: 24px;
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+h1::before {
+  content: "SALE";
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  background-color: #ec2f2f;
+  color: #fff;
+  display: inline-block;
+  padding: 7px 15px;
+  position: absolute;
+  top: -17px;
+  left: -35px;
 }
 
 h3 {
@@ -65,7 +80,7 @@ button {
   color: white;
   border: none;
 
-  width: 825px;
+  width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -81,4 +96,39 @@ button:hover {
   color: #a7a7a7;
   font-size: 18;
   margin-bottom: 20px;
+}
+
+.colors div {
+  display: inline-block;
+  margin: 30px 10px;
+  width: 25px;
+  height: 25px;
+}
+
+.colors div:last-child {
+  margin-right: 0;
+}
+
+.black-box {
+  background-color: black;
+}
+
+.blue-box {
+  background-color: #2f6ee2;
+}
+
+.red-box {
+  background-color: red;
+}
+
+.yellow-box {
+  background-color: yellow;
+}
+
+.green-box {
+  background-color: green;
+}
+
+.brown-box {
+  background-color: brown;
 }
