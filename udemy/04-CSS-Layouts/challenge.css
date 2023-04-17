@@ -10,12 +10,13 @@ body {
 }
 
 .product-img {
-  float: left;
-  margin-right: 40px;
 }
 
 /* PRODUCT */
 .product {
+  display: grid;
+  grid-template-columns: 250px 1fr 1fr;
+  column-gap: 40px;
   border: 4px solid black;
   width: 825px;
   margin: 50px auto;
@@ -28,20 +29,25 @@ body {
   text-transform: uppercase;
   background-color: #f7f7f7;
   padding: 15px;
+  grid-column: 1 / -1;
 }
 
 /* PRODUCT INFORMATION */
 .product-info {
   /* (825 - 8 - 250 - 80) / 2 */
-  width: 243px;
-  float: left;
-  margin-right: 40px;
+  /* width: 243px; */
+  flex: 1;
   margin-top: 20px;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .price {
   font-size: 24px;
-  float: left;
 }
 
 .shipping {
@@ -49,9 +55,6 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   color: #777;
-  margin-bottom: 20px;
-  float: right;
-  margin-top: 8px;
 }
 
 .sale {
@@ -72,7 +75,6 @@ body {
 }
 
 .product-description {
-  clear: both;
   margin-bottom: 10px;
 }
 
@@ -88,12 +90,15 @@ body {
   text-decoration: none;
 }
 
+.product-colors {
+  display: flex;
+  gap: 10px;
+}
+
 .color {
   background-color: #000;
   height: 22px;
   width: 22px;
-  display: inline-block;
-  margin-right: 10px;
 }
 
 .color-blue {
@@ -114,9 +119,9 @@ body {
 
 /* PRODUCT DETAILS */
 .product-details {
-  width: 243px;
-  float: left;
+  /* width: 243px; */
   margin-top: 20px;
+  flex: 1;
 }
 
 .details-title {
@@ -145,42 +150,10 @@ body {
   padding: 15px;
   width: 100%;
   border-top: 4px solid black;
+  grid-column: 1 / -1;
 }
 
 .add-cart:hover {
   color: #000;
   background-color: #fff;
 }
-
-/* 내 풀이 */
-/* 
-.clearfix::after {
-  clear: both;
-  content: "";
-  display: block;
-}
-
-img {
-  float: left;
-  margin-right: 40px;
-}
-
-.price {
-  float: left;
-}
-
-.shipping {
-  float: right;
-}
-
-.info {
-  float: left;
-  width: 240px;
-  margin-top: 30px;
-  margin-right: 40px;
-}
-
-.details {
-  float: left;
-  width: 240px;
-} */
